@@ -1,7 +1,5 @@
 <script>
-	let people = [
-		{name: "test", age:"26", city:"test"}
-	];
+	let people = [{ name: "test", age: "26", city: "test" }];
 	let showEdit = false;
 
 	let newPerson = {
@@ -26,8 +24,6 @@
 	function show() {
 		showEdit = true;
 	}
-
-	
 </script>
 
 <main>
@@ -86,8 +82,8 @@
 		font-size: 4em;
 		font-weight: 100;
 	}
-	ul{
-		list-style:none;
+	ul {
+		list-style: none;
 	}
 
 	@media (min-width: 640px) {
