@@ -31,31 +31,41 @@
 	<div>
 		<p>Voeg iemand toe!</p>
 		{#if !showEdit}
-			<button on:click={show}>Toevoegen</button>
+			<button id="expand-add-person" on:click={show}>Toevoegen</button>
 		{/if}
 		{#if showEdit}
 			<div class="edit">
-				<label
-					><strong>Naam:</strong><br />
-					<input type="text" bind:value={newPerson.name} />
+				<label>
+					<strong>Naam:</strong><br />
+					<input
+						id="add-person-name"
+						type="text"
+						bind:value={newPerson.name}
+					/>
 				</label>
-				<label
-					><strong>Leeftijd:</strong><br />
-					<input type="text" bind:value={newPerson.age} /></label
-				>
-				<label
-					><strong>Woonplaats:</strong><br /><input
+				<label>
+					<strong>Leeftijd:</strong><br />
+					<input
+						id="add-person-age"
+						type="text"
+						bind:value={newPerson.age}
+					/>
+				</label>
+				<label>
+					<strong>Woonplaats:</strong><br />
+					<input
+						id="add-person-city"
 						type="text"
 						bind:value={newPerson.city}
-					/></label
-				>
-				<button on:click={cancel}>Annuleer</button>
-				<button on:click={addPerson}>Toevoegen</button>
+					/>
+				</label>
+				<button id="cancel-add-person" on:click={cancel}>Annuleer</button>
+				<button id="confirm-add-person" on:click={addPerson}>Toevoegen</button>
 			</div>
 		{/if}
 	</div>
 	<div>
-		<ul>
+		<ul id="people-list">
 			{#each people as person}
 				<li>{person.name} - {person.age} - {person.city}</li>
 			{/each}
