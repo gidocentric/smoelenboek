@@ -10,6 +10,6 @@ jobs:
       - name: run smoelenboek tests
         uses: cypress-io/github-action@v2
         with:
-          start: "npm run start"
+          start: "npm run start --host"
           wait-on: "http://localhost:5000"
           config: baseUrl=http://localhost:5000
